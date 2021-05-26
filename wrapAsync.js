@@ -1,6 +1,6 @@
 
 
-//function for error handling from async functions
+//function for async error handling 
 function wrapAsync(fn){
   return function(req, res, next){
     fn(req, res, next).catch(error => next(error))
